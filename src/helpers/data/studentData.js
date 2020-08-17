@@ -127,13 +127,20 @@ const students = [{
 
 let studentsSharkFood = [];
 
-const livingStudents = () => students.filter((student) => student.isAlive === false);
+const livingStudents = () => students.filter((student) => student.isAlive === true);
 
 const dearlyBeloved = () => students.filter((student) => student.isAlive === true);
 
 const followTheLight = (studentId) => {
   students.find((student) => student.id === studentId).isAlive = false;
 };
+
+const reviveStudents = () => {
+  students.forEach((student) => {
+    students.find((stdnt) => stdnt.id === student.id).isAlive = true;
+  });
+  studentsSharkFood = [];
+}
 
 const sharkAttack = () => {
   let sharkFoodStudent = Math.floor(Math.random() * Math.floor(students.length)) + 1;
@@ -154,6 +161,7 @@ const sharkAttack = () => {
 export default {
   dearlyBeloved,
   livingStudents,
+  reviveStudents,
   followTheLight,
   sharkAttack,
 };

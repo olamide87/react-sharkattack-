@@ -4,29 +4,29 @@ import PropTypes from 'prop-types';
 import Student from '../Student/Student';
 import studentShape from '../../helpers/propTypes/studentsShape';
 
-import './SharkTank.scss';
+import './Graveyard.scss';
 
-class SharkTank extends React.Component {
+class Graveyard extends React.Component {
   static propTypes = {
-    livingStudents: PropTypes.arrayOf(studentShape.studentShape),
+    dearlyBeloved: PropTypes.arrayOf(studentShape.studentShape),
   }
 
   render() {
-    const { livingStudents } = this.props;
+    const { dearlyBeloved } = this.props;
 
-    const studentCards = livingStudents.map((student) => (
+    const passedStudents = dearlyBeloved.map((student) => (
       <Student key={student.id} student={student} />
     ));
 
     return (
-      <div id="shark-tank">
-        <h2 id="shark-tank-header">Shark Tank</h2>
+      <div id="graveyard">
+        <h2 id="graveyard-header">Graveyard</h2>
         <div className="card-columns">
-          {studentCards}
+          { passedStudents }
         </div>
       </div>
     );
   }
 }
 
-export default SharkTank;
+export default Graveyard;

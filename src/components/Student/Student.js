@@ -2,7 +2,7 @@ import React from 'react';
 
 import studentShape from '../../helpers/propTypes/studentsShape';
 
-import './LiveStudent.scss';
+import './Student.scss';
 
 class Student extends React.Component {
   static propTypes = {
