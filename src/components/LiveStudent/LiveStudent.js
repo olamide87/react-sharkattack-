@@ -22,7 +22,7 @@ class Student extends React.Component {
             student.isAlive ? (
               <i className="fas fa-fish fa-2x"></i>
             ) : (
-              <i className="fas f-skull-crossbones fa-2x"></i>
+              <i className="fas fa-skull-crossbones fa-2x"></i>
             )
           }
           <span className="ml-1">{student.firstName}</span>

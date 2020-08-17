@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.scss';
 
+import SharkTank from '../components/SharkTank/SharkTank';
+
 import studentsData from '../helpers/data/studentData';
 
 class App extends React.Component {
   state = {
-    livingStudents:[],
+    livingStudents: [],
     dearlyBeloved: [],
   }
 
