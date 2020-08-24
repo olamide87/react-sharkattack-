@@ -20,7 +20,7 @@ class SharkTank extends React.Component {
 
     return (
       <div id="shark-tank">
-        <h2 id="shark-tank-header">Shark Tank</h2>
+        <h2 id="shark-tank-header">SHARK TANK</h2>
         <div className="card-columns">
           {studentCards}
         </div>

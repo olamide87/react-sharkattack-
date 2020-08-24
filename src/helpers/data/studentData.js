@@ -8,7 +8,7 @@ const students = [{
   id: 2,
   firstName: 'Austin',
   lastName: 'Phy',
-  isAlive: false,
+  isAlive: true,
 },
 {
   id: 3,
@@ -80,7 +80,7 @@ const students = [{
   id: 14,
   firstName: 'Nate',
   lastName: 'Owens',
-  isAlive: false,
+  isAlive: true,
 },
 {
   id: 15,
@@ -92,7 +92,7 @@ const students = [{
   id: 16,
   firstName: 'Nikhil',
   lastName: 'Gaikwad',
-  isAlive: false,
+  isAlive: true,
 },
 {
   id: 17,
@@ -110,7 +110,7 @@ const students = [{
   id: 19,
   firstName: 'Phonesalo',
   lastName: 'Sihanorak',
-  isAlive: false,
+  isAlive: true,
 },
 {
   id: 20,
@@ -127,9 +127,13 @@ const students = [{
 
 let studentsSharkFood = [];
 
-const livingStudents = () => students.filter((student) => student.isAlive === true);
+const livingStudents = () => {
+  const pupil = students.filter((student) => student.isAlive === true);
+  console.error('it works', pupil);
+  return pupil;
+}
 
-const dearlyBeloved = () => students.filter((student) => student.isAlive === true);
+const dearlyBeloved = () => students.filter((student) => student.isAlive === false);
 
 const followTheLight = (studentId) => {
   students.find((student) => student.id === studentId).isAlive = false;
